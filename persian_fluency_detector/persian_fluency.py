@@ -2,12 +2,13 @@ import os
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
 from persian_syllable_counter import PersianSyllableCounter
-from persian_speech_to_text import SpeechToText
+# from persian_speech_to_text import SpeechToText
 
+import persian_speech_to_text as pstt
 class Fluency:
     def __init__(self, _filename):
         self.filename = _filename
-        self.SpeechToText = SpeechToText()
+        self.SpeechToText = pstt.SpeechToText()
         self.SyllableCounter = PersianSyllableCounter()
         self.audio = AudioSegment.from_wav(self.filename)
         self.SpeachRate = None
