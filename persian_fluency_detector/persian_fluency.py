@@ -1,7 +1,7 @@
 import os
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
-from persian_syllable_counter.persian_syllable_counter import PersianSyllableCounter
+from persian_syllable_counter import PersianSyllableCounter
 from persian_speech_to_text import SpeechToText
 
 class Fluency:
